@@ -35,7 +35,7 @@ The Paddy Sri Lanka multispectral dataset was used in this project. The dataset 
 
 These bands are widely used in vegetation monitoring and agricultural analytics.
 
-🔗 Dataset Link: *(Add your dataset link here)*
+🔗 Dataset Link: https://data.mendeley.com/datasets/h8s5mn52j6/1
 
 ---
 
