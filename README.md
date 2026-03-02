@@ -1,130 +1,143 @@
-# Multispectral-Crop-Analysis
+# 🌾 Multispectral Crop Health Monitoring and Stress Detection
 
-🚀 Aerial Data Processing and 3D Terrain Modeling Using UAV Imagery
+This project focuses on analyzing multispectral satellite imagery to detect crop stress in paddy fields using vegetation indices and geospatial techniques. The goal is to enable early decision-making in agriculture through remote sensing and spectral analysis.
 
-This project focuses on processing drone-based aerial imagery to generate high-resolution orthomosaics and Digital Elevation Models (DEMs) using photogrammetric techniques. The objective was to support precision agriculture and terrain analysis without relying on Ground Control Points (GCPs), leveraging high-precision PPK-based drone data.
+---
 
-📌 Problem Statement
+## 📌 Problem Statement  
+Agriculture faces significant productivity loss due to late detection of crop stress, disease, and nutrient deficiencies. Traditional monitoring methods rely on manual inspection, which is time-consuming and inefficient.
 
-Accurate aerial mapping traditionally requires Ground Control Points, which increases field survey time and operational cost. This project explores an alternative workflow using PPK-enabled drone imagery to generate reliable orthomosaics and terrain models without GCPs.
+Multispectral imaging provides a scalable and data-driven solution by analyzing spectral responses of vegetation across different wavelengths. This project demonstrates how multispectral data can be used for crop health monitoring and early stress detection.
 
-This approach improves:
+---
 
-Efficiency
+## 🚀 Project Impact  
 
-Cost-effectiveness
+This project highlights how remote sensing can transform agriculture by enabling:
 
-Scalability for large agricultural regions.
+- Early crop stress and disease detection  
+- Precision agriculture and targeted intervention  
+- Improved yield prediction  
+- Efficient water and fertilizer usage  
+- Sustainable and climate-resilient farming  
+- Large-scale monitoring of agricultural fields  
 
-📊 Dataset and Data Acquisition
+---
 
-The aerial data used in this project was captured using a UAV equipped with high-precision positioning. The dataset included:
+## 📊 Dataset  
 
-High-resolution RGB imagery
+The Paddy Sri Lanka multispectral dataset was used in this project. The dataset contains imagery with multiple spectral bands:
 
-Camera position metadata
+- Red  
+- Green  
+- Blue  
+- Near-Infrared (NIR)
 
-PPK-based geolocation data
+These bands are widely used in vegetation monitoring and agricultural analytics.
 
-This enabled accurate georeferencing and terrain reconstruction.
+🔗 Dataset Link: *(Add your dataset link here)*
 
-🛠️ Tools and Platforms
+---
 
-Agisoft Metashape for photogrammetry and 3D reconstruction
+## 🛠️ Tools and Platforms  
 
-GIS tools for spatial analysis
+- ENVI for multispectral image processing  
+- GIS tools for spatial analysis  
+- Remote sensing techniques  
+- Python and Jupyter (optional analysis)
 
-UAV-based aerial imagery
+---
 
-Remote sensing techniques
+## 🔬 Methodology  
 
-🔬 Methodology
-Step 1: Data Import and Camera Reference
+### 1. Data Import and Visualization  
+The dataset was loaded and visualized to inspect band availability and spatial variability.
 
-Aerial images were imported, and high-precision camera reference coordinates were loaded from metadata. This ensured spatial accuracy.
+### 2. Preprocessing  
+The following preprocessing steps were performed:
 
-Step 2: Image Alignment
+- Radiometric calibration  
+- Atmospheric correction  
+- Noise reduction  
+- Reflectance generation  
 
-Feature matching and bundle adjustment were used to reconstruct camera positions and generate a sparse point cloud.
+These steps improved the reliability of spectral analysis.
 
-Step 3: Camera Optimization
+### 3. False Color Composite  
+False color visualization was generated using NIR, Red, and Green bands to highlight vegetation health and spatial patterns.
 
-Camera parameters were refined to improve spatial consistency and reduce reconstruction error.
+### 4. Vegetation Index Computation  
 
-Step 4: Dense Point Cloud Generation
+#### NDVI  
+NDVI was used to measure vegetation vigor and identify unhealthy crop regions.
 
-A dense 3D representation of the terrain was generated from aligned imagery.
+#### SAVI  
+SAVI was computed to reduce soil background influence, especially during early crop growth stages.
 
-Step 5: Digital Elevation Model (DEM) Creation
+### 5. Crop Health Analysis  
+Vegetation indices were analyzed to identify potential stress zones in paddy fields.
 
-A raster elevation model was created from the dense point cloud to represent terrain height.
+---
 
-Step 6: Orthomosaic Generation
+## 💡 My Contributions  
 
-Distortion-free, geo-referenced orthomosaics were generated for accurate spatial analysis.
+- Designed structured workflows for multispectral analysis  
+- Performed preprocessing and reflectance calibration  
+- Computed vegetation indices such as NDVI and SAVI  
+- Conducted spatial crop health analysis  
+- Generated visual maps for stress detection  
+- Documented reproducible geospatial workflows  
 
-🚀 Project Impact
+---
 
-This project demonstrates how remote sensing and spectral analysis can enable early and data-driven agricultural decision-making. By analyzing spectral responses of crops, it is possible to detect stress conditions before they are visible to the human eye.
+## 🌱 Key Techniques Used  
 
-The developed workflow supports:
+- Radiometric and atmospheric correction  
+- Vegetation indices  
+- False color composite  
+- Spatial crop monitoring  
+- Remote sensing-based decision support  
 
-Early crop stress and disease detection
+---
 
-Precision agriculture and targeted intervention
+## 📊 Key Observations  
 
-Improved yield prediction and monitoring
+- Clear spatial variation in crop health was observed  
+- Vegetation indices effectively highlighted stressed regions  
+- Multispectral imaging proved useful for large-scale crop monitoring  
+- False color visualization enabled rapid agricultural insights  
 
-Optimization of water, fertilizer, and pesticide usage
+---
 
-Sustainable and climate-resilient farming practices
+## 🌍 Industry Use Cases  
 
-These approaches are widely used in AgTech, environmental monitoring, and smart farming systems.
+- Precision agriculture  
+- Crop monitoring and yield prediction  
+- Environmental and climate monitoring  
+- Soil and irrigation planning  
+- Agricultural insurance and risk assessment  
 
-📈 Results
+---
 
-Key outcomes:
+## ⚠️ Challenges Faced  
 
-High-resolution orthomosaic maps suitable for crop monitoring
+- Atmospheric noise and sensor distortion  
+- Soil background influence  
+- Limited ground truth data  
+- Variability in crop growth stages  
 
-Terrain elevation models for irrigation and drainage planning
+---
 
-Improved mapping efficiency using a GCP-free workflow
+## 🔮 Future Scope  
 
-Accurate spatial visualization for agricultural decision-making.
+- Integration of machine learning models  
+- Deep learning-based crop classification  
+- Multispectral and hyperspectral fusion  
+- Real-time monitoring using drones  
+- Cloud-based geospatial pipelines  
 
-🚀 Applications
+---
 
-This workflow can be applied in:
+## 📬 Contact  
 
-Precision agriculture
-
-Crop monitoring
-
-Soil and irrigation planning
-
-Flood and terrain analysis
-
-Environmental monitoring
-
-Smart farming and UAV analytics.
-
-⚠️ Challenges Faced
-
-Image overlap and flight planning
-
-Handling large datasets
-
-Computational resource limitations
-
-Accuracy validation without GCPs.
-
-🔮 Future Work
-
-Integration with multispectral and hyperspectral imaging
-
-AI-based crop classification
-
-Automated stress detection
-
-Cloud-based geospatial pipelines
+For collaboration or research discussions in remote sensing, agriculture, and AI, feel free to connect.
